@@ -52,9 +52,9 @@ def load(path, sr=22050, mono=True, mode="numpy", offset=0.0, duration=None):
 
 
 def write_wav(path_str, audio, sr):
-    print(path_str)
-    stempeg.write_stems(filename=path_str,audio=audio, rate = sr)
-    #soundfile.write(path, audio.T, sr, "PCM_16")
+    #print(path_str)
+    #stempeg.write_stems(filename=path_str,audio=audio, rate = sr)
+    soundfile.write(path, audio.T, sr, "PCM_16")
 
 
 def resample(audio, orig_sr, new_sr, mode="numpy"):
