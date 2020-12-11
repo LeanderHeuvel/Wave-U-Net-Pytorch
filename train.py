@@ -42,7 +42,7 @@ def main(args):
     writer = SummaryWriter(args.log_dir)
 
     ### DATASET
-    musdb = get_musdb_folds(args.dataset_dir)
+    musdb = get_musdb_folds(args.dataset_dir,args.musdb_version)
     # If not data augmentation, at least crop targets to fit model output shape
     crop_func = partial(crop_targets, shapes=model.shapes)
     # Data augmentation function for training
@@ -226,6 +226,8 @@ if __name__ == '__main__':
                         help="Train separate model for each source (1) or only one (0)")
     parser.add_argument('--feature_growth', type=str, default="double",
                         help="How the features in each layer should grow, either (add) the initial number of features each time, or multiply by 2 (double)")
+    parser.add_argument('--musdb_version', type=str, default="HQ",
+                        help="What version of the MUSDB do we use? HQ or compressed?")
 
     args = parser.parse_args()
 

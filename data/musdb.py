@@ -63,7 +63,7 @@ def get_musdb(database_path):
         samples = list()
 
         # Go through tracks
-        for track in sorted(tracks):
+        for track in sorted(tracks, key=lambda x: x.name ):
             # Skip track if mixture is already written, assuming this track is done already
             track_path = track.path[:-4]
             mix_path = track_path + "_mix.wav"
