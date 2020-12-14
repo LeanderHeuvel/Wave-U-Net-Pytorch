@@ -1,3 +1,5 @@
+# Adaptations of the Wave-U-net model
+This repository contains small adaptations and bugfixes for the library to work. Prediction and training with the MUSDB18 database has been verified and works. 
 # Wave-U-Net (Pytorch)
 
 Improved version of the [Wave-U-Net](https://arxiv.org/abs/1806.03185) for audio source separation, implemented in Pytorch.
