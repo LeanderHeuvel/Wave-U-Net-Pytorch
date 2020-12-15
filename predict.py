@@ -29,7 +29,7 @@ def main(args):
 
     output_folder = os.path.dirname(args.input) if args.output is None else args.output
     for inst in preds.keys():
-        data.utils.write_wav(os.path.join(output_folder, os.path.basename(args.input) + "_" + inst + ".wav"), preds[inst], args.sr)
+        data.utils.write_wav(os.path.join(output_folder, os.path.basename(args.input) + "_" + inst + ".wav"), preds[inst].T, args.sr)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
