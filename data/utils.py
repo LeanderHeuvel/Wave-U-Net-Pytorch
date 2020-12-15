@@ -2,7 +2,6 @@ import librosa
 import numpy as np
 import soundfile
 import torch
-import stempeg
 
 
 def random_amplify(mix, targets, shapes, min, max):

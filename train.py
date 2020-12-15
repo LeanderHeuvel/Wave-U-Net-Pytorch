@@ -62,7 +62,7 @@ def main(args):
         criterion = nn.MSELoss()
     else:
         raise NotImplementedError("Couldn't find this loss!")
-#ugrugf
+
     # Set up optimiser
     optimizer = Adam(params=model.parameters(), lr=args.lr)
 
